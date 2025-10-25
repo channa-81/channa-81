@@ -1,41 +1,13 @@
 <!-- Violet–Cyan Glowing Profile README for @channa-81 -->
 
-<p align="center">
-  <!-- Animated Gradient Name -->
-  <svg viewBox="0 0 950 120" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#7A00FF">
-          <animate attributeName="stop-color" values="#7A00FF;#00C2FF;#7A00FF" dur="6s" repeatCount="indefinite" />
-        </stop>
-        <stop offset="100%" stop-color="#00C2FF">
-          <animate attributeName="stop-color" values="#00C2FF;#7A00FF;#00C2FF" dur="6s" repeatCount="indefinite" />
-        </stop>
-      </linearGradient>
-      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="5" result="coloredBlur" />
-        <feMerge>
-          <feMergeNode in="coloredBlur" />
-          <feMergeNode in="SourceGraphic" />
-        </feMerge>
-      </filter>
-    </defs>
+<h1 align="center">
+  Hi there, I'm Yallaling
+    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
+</h1>
 
-    <rect width="950" height="120" rx="12" fill="#0A0B12" />
-    <text x="50%" y="60%" text-anchor="middle" font-size="40" font-weight="700"
-          font-family="Fira Sans, Arial"
-          fill="url(#grad)" filter="url(#glow)">Yallaling Channa</text>
-  </svg>
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&pause=1000&color=8A2BE2&center=true&vCenter=true&width=650&lines=Java+Developer+%7C+Full-Stack+Engineer;Spring+Boot+%7C+Microservices+%7C+DevOps;Docker+%7C+CI%2FCD+%7C+Cloud+Automation" />
-</p>
-
----
 
 ## 🪶 About Me
-🚀 Java Developer & Full-Stack Engineer specializing in **Spring Boot, REST APIs, and DevOps pipelines**.  
+🚀 Java Developer & Full-Stack Engineer specializing in **Spring Boot, REST APIs, and DevOps**.  
 🎯 Passionate about building **clean, scalable, and automated** backend systems.  
 💡 I enjoy blending **code + cloud + creativity** to solve real problems.
 
