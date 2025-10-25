@@ -43,12 +43,12 @@ I love building scalable backend systems, automating workflows, and experimentin
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=YallalingChanna&show_icons=true&theme=radical" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=YallalingChanna&theme=radical" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=channa-81&show_icons=true&theme=radical" />
+  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=channa-81&theme=radical" />
 </p>
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YallalingChanna&layout=compact&theme=radical" />
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=channa-81&layout=compact&theme=radical" />
 </p>
 
 ---
