@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <!-- Gradient for the name (animated colors) -->
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop id="s1" offset="0%" stop-color="#7A00FF">
+        <animate attributeName="stop-color" values="#7A00FF;#00C2FF;#7A00FF" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop id="s2" offset="50%" stop-color="#00C2FF">
+        <animate attributeName="stop-color" values="#00C2FF;#8A2BE2;#00C2FF" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop id="s3" offset="100%" stop-color="#8A2BE2">
+        <animate attributeName="stop-color" values="#8A2BE2;#7A00FF;#8A2BE2" dur="6s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Subtle moving mask to create gradient wave -->
+    <linearGradient id="waveMask" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.5">
+        <animate attributeName="offset" values="-20%;120%" dur="6s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="white" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Glow filter used for text and badges -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Slight stronger glow for badges -->
+    <filter id="badgeGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="b1"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Rounded chip background as pattern (for consistency) -->
+    <style type="text/css"><![CDATA[
+      .title { font-family: 'Fira Sans', 'Segoe UI', Arial, sans-serif; font-weight:700; font-size:84px; fill: url(#nameGrad); }
+      .subtitle { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-weight:600; font-size:18px; fill:#CDEBFF; }
+      .chipText { font-family: 'Inter', 'Segoe UI', Arial, sans-serif; font-weight:600; font-size:20px; fill: #DFF7FF; }
+    ]]></style>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1200" height="320" fill="#05060a"/>
+
+  <!-- Soft vignette to add depth -->
+  <radialGradient id="vign" cx="50%" cy="35%" r="80%">
+    <stop offset="0%" stop-color="#000000" stop-opacity="0.0"/>
+    <stop offset="100%" stop-color="#000000" stop-opacity="0.45"/>
+  </radialGradient>
+  <rect width="1200" height="320" fill="url(#vign)" />
+
+  <!-- Name with mask to create a moving shimmer wave -->
+  <g filter="url(#neonGlow)">
+    <text x="600" y="120" text-anchor="middle" class="title">Channa</text>
+
+    <!-- overlay a subtle moving highlight (wave) using mask -->
+    <mask id="mask1">
+      <rect x="0" y="0" width="1200" height="320" fill="black"/>
+      <!-- the wave light -->
+      <rect x="-360" y="0" width="480" height="320" fill="white" opacity="0.06">
+        <animate attributeName="x" from="-480" to="1200" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </mask>
+
+    <rect x="0" y="0" width="1200" height="320" fill="url(#nameGrad)" mask="url(#mask1)" opacity="0.35"/>
+  </g>
+
+  <!-- Role chips group -->
+  <g transform="translate(0,160)" filter="url(#badgeGlow)">
+    <!-- Chip 1 -->
+    <g class="chip" transform="translate(120,40)" >
+      <rect rx="14" ry="14" width="320" height="64" fill="#041016" stroke="#00C2FF" stroke-width="3" opacity="0.95"/>
+      <rect rx="14" ry="14" width="320" height="64" fill="none" stroke="url(#nameGrad)" stroke-width="1.5" opacity="0.6"/>
+      <text x="160" y="40" text-anchor="middle" class="chipText">Java Developer</text>
+      <!-- pulse effect -->
+      <rect x="-2" y="-2" rx="14" ry="14" width="324" height="68" fill="none" stroke="#00C2FF" stroke-width="6" opacity="0.0">
+        <animate attributeName="opacity" values="0;0.14;0" dur="3.2s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="6;12;6" dur="3.2s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Chip 2 -->
+    <g class="chip" transform="translate(440,40)" >
+      <rect rx="14" ry="14" width="320" height="64" fill="#041016" stroke="#8A2BE2" stroke-width="3" opacity="0.95"/>
+      <rect rx="14" ry="14" width="320" height="64" fill="none" stroke="url(#nameGrad)" stroke-width="1.5" opacity="0.6"/>
+      <text x="160" y="40" text-anchor="middle" class="chipText">Full-Stack Engineer</text>
+      <rect x="-2" y="-2" rx="14" ry="14" width="324" height="68" fill="none" stroke="#8A2BE2" stroke-width="6" opacity="0.0">
+        <animate attributeName="opacity" values="0;0.14;0" dur="3.6s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="6;12;6" dur="3.6s" repeatCount="indefinite" />
+      </rect>
+    </g>
+
+    <!-- Chip 3 -->
+    <g class="chip" transform="translate(760,40)" >
+      <rect rx="14" ry="14" width="320" height="64" fill="#041016" stroke="#FF48C4" stroke-width="3" opacity="0.95"/>
+      <rect rx="14" ry="14" width="320" height="64" fill="none" stroke="url(#nameGrad)" stroke-width="1.5" opacity="0.6"/>
+      <text x="160" y="40" text-anchor="middle" class="chipText">DevOps · CI/CD · Docker</text>
+      <rect x="-2" y="-2" rx="14" ry="14" width="324" height="68" fill="none" stroke="#FF48C4" stroke-width="6" opacity="0.0">
+        <animate attributeName="opacity" values="0;0.14;0" dur="3s" repeatCount="indefinite" />
+        <animate attributeName="stroke-width" values="6;12;6" dur="3s" repeatCount="indefinite" />
+      </rect>
+    </g>
+  </g>
+
+  <!-- subtle bottom glow bar -->
+  <g opacity="0.14" filter="url(#neonGlow)">
+    <rect x="80" y="290" width="1040" height="10" rx="5" fill="url(#nameGrad)"/>
+  </g>
+
+  <!-- small caption -->
+  <text x="600" y="310" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="12" fill="#8A9FB2" opacity="0.9">
+    Java · Spring Boot · REST · Docker · CI/CD · Cloud
+  </text>
+</svg>
