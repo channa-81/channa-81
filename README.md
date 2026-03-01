@@ -90,13 +90,16 @@ ML platform with clustering and Flask UI, **Dockerized** for deployment.
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=channa-81&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img width="48%" src="https://github-readme-stats.demolab.com/api?username=channa-81&show_icons=true&theme=tokyonight&hide_border=true" />
+  <img width="48%" src="https://github-readme-streak-stats.demolab.com/?user=channa-81&theme=tokyonight&hide_border=true" />
 </p>
+
+<p align="center">
+  <img width="48%" src="https://github-readme-stats.demolab.com/api/top-langs/?username=channa-81&layout=compact&theme=tokyonight&hide_border=true" />
+</p>
+
 <p align="center">
    <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=channa-81&theme=tokyonight&hide_border=true" />
-</p>
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=channa-81&layout=compact&theme=tokyonight&hide_border=true" />
 </p>
 
 ---
